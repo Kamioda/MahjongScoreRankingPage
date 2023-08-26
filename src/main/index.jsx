@@ -1,5 +1,6 @@
 import React, { useState, createElement } from 'react';
-import { SetTitle } from './title.json';
+import { SetTitle } from './title.js';
+import { ReadLanguageData } from '../languageloader';
 
 
 /**
@@ -16,6 +17,7 @@ const GetRanking = () => {
 
 const IndexItem = async props => {
     SetTitle(props.match.params.language, 'index');
+    const LangData = ReadLanguageData(props.match.params.language);
     const [ records, setRecords ] = useState(undefined);
     GetRanking().then(data => {
         setRecords(data);
@@ -34,14 +36,14 @@ const IndexItem = async props => {
                 </article>
             )
         });
-    return createElement(
-        'div', 
-        {
-            align: 'center',
-            className: 'container'
-        },
-        Data
-    );
+    return (
+        <div className='container'>
+            <section>
+                <h3>{LangData.content.index.title}</h3>
+            </section>
+            {createElement('section', {}, Data)}
+        </div>
+    )
 };
 
 export default IndexItem;
