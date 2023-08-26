@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import IndexItem from './main/index.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import IndexItem from './main/index.jsx';
 
 
 const App = () => {
     return (
         <Router>
-            <Switch>
+            <Routes>
                 <Route extract path="/:language/" Component={IndexItem}></Route>
-            </Switch>
+            </Routes>
         </Router>
     );
 }

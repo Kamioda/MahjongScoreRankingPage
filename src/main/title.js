@@ -1,4 +1,3 @@
-import lang from '../language.json'
 import { ReadLanguageData } from '../languageloader';
 
 export const SetTitle = (Language, Page) => {
