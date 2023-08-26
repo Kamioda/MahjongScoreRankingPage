@@ -6,6 +6,11 @@
             "title": "麻雀スコアランキング",
             "subtitles": {
                 "index": "トップ"
+            },
+            "content": {
+                "index": {
+                    "title": "Ranking"
+                }
             }
         },
         {
@@ -13,6 +18,11 @@
             "title": "Mahjong Score Ranking",
             "subtitles": {
                 "index": "Top"
+            },
+            "content": {
+                "index": {
+                    "title": "Ranking"
+                }
             }
         }
     ]
