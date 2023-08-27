@@ -7,7 +7,7 @@ const App = () => {
     return (
         <Router>
             <Routes>
-                <Route extract path="/:language/" Component={IndexItem}></Route>
+                <Route index={true} extract path="/:language/" Component={IndexItem}></Route>
             </Routes>
         </Router>
     );
