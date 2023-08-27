@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import IndexItem from './main/index.jsx';
+import addRecordFormItem from './main/add.jsx';
 
 const App = () => {
     return (
         <Router>
             <Routes>
-                <Route index={true} extract path="/:language/" Component={IndexItem}></Route>
+                <Route index={true} extract path="/:language/" Component={IndexItem} />
+                <Route index extract path="/:language/new" Component={addRecordFormItem} />
             </Routes>
         </Router>
     );

@@ -5,12 +5,26 @@
             "lang": "ja-jp",
             "title": "麻雀スコアランキング",
             "subtitles": {
-                "index": "トップ"
+                "index": "トップ",
+                "add": "レコード追加"
             },
             "content": {
                 "index": {
                     "title": "現在のランキング",
                     "record_not_found": "データが登録されていません"
+                },
+                "add": {
+                    "title": "レコード追加",
+                    "caption": {
+                        "if_cpu": "ＣＰＵの場合は、プレイヤーＩＤフォームには\"CPU\"と入力して下さい。",
+                        "player": "プレイヤー",
+                        "player_id": "プレイヤーID",
+                        "score": "スコア",
+                        "submit": "送信",
+                        "player_count": "プレイヤー数（ＣＰＵを含む）",
+                        "player_count_3": "３人",
+                        "player_count_4": "４人"
+                    }
                 }
             }
         },
@@ -18,12 +32,26 @@
             "lang": "en-us",
             "title": "Mahjong Score Ranking",
             "subtitles": {
-                "index": "Top"
+                "index": "Top",
+                "add": "Add records"
             },
             "content": {
                 "index": {
                     "title": "Current Ranking",
                     "record_not_found": "Ranking record is not entried."
+                },
+                "add": {
+                    "title": "Add new record",
+                    "caption": {
+                        "if_cpu": "If the player is CPU, please input \"CPU\" in the player id form.",
+                        "player": "Player",
+                        "player_id": "Player ID",
+                        "score": "Score",
+                        "submit": "Send",
+                        "player_count": "Player count(Contain CPUs)",
+                        "player_count_3": "3 Players",
+                        "player_count_4": "4 Players"
+                    }
                 }
             }
         }
