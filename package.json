@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --write --end-of-line crlf .",
+    "eslint": "eslint --cache --ext .js,.jsx .",
+    "eslint:fix": "eslint --cache --ext .js,.jsx . --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "react-scripts start"
   },
