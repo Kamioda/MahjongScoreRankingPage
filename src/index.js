@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import IndexItem from './main/index.jsx';
 
-
 const App = () => {
     return (
         <Router>
@@ -12,7 +11,11 @@ const App = () => {
             </Routes>
         </Router>
     );
-}
+};
 
 const root = ReactDOM.createRoot(document.getElementById('content'));
-root.render(<React.StrictMode><App /></React.StrictMode>)
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
