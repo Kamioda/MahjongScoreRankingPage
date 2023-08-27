@@ -1,6 +1,6 @@
 import React, { useState, createElement } from 'react';
 import { SetTitle } from './title.js';
-import { ReadLanguageData } from '../languageloader';
+import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader.js';
 
 
 /**
@@ -15,15 +15,16 @@ const GetRanking = () => {
         .then(response => response.json());
 }
 
-const IndexItem = async props => {
-    SetTitle(props.match.params.language, 'index');
-    const LangData = ReadLanguageData(props.match.params.language);
+const IndexItem = () => {
+    const lang = GetLanguageFromParameter();
+    SetTitle(lang, 'index');
+    const LangData = ReadLanguageData(lang);
     const [ records, setRecords ] = useState(undefined);
     GetRanking().then(data => {
         setRecords(data);
     });
     const Data = records == null 
-        ? <p>データがありません</p>
+        ? <p>{LangData.content.index.record_not_found}</p>
         : Object.keys(records).map(i => {
             return (
                 <article className='ranking' key={i}>
