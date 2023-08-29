@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PageHeaderItem = () => {
     const Lang = GetLanguageFromParameter();
-    console.log(Lang);
     const LangData = ReadLanguageData(Lang);
     console.log(LangData.header);
     const menuClasses = [
