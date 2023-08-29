@@ -1,6 +1,7 @@
 import React from 'react';
 import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader';
 import PageHeaderItem from '../header.jsx';
+import '../css/add.css';
 
 const createMainForm = (playerCount, Lang) => {
     const [records, setRecords] = React.useState([...Array(playerCount)].map(() => ({ player_id: '', score: 0 })));

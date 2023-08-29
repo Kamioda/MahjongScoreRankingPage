@@ -1,0 +1,18 @@
+dt {
+    margin-top: 15px;
+    font-weight: bold;
+}
+dd {
+    margin: 1em;
+}
+
+dd dl dt {
+    font-weight: normal;
+}
+
+dd dl dd {
+    margin-left: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
