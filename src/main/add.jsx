@@ -35,7 +35,7 @@ const createMainForm = (playerCount, Lang) => {
                     type: 'number',
                     onChange: e => {
                         const Data = records;
-                        Data[formCountIndex].score = e.target.value;
+                        Data[formCountIndex].score = parseInt(e.target.value);
                         setRecords(Data);
                     },
                 })
