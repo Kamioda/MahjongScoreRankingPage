@@ -8,8 +8,8 @@ const App = () => {
     return (
         <Router>
             <Routes>
-                <Route index={true} extract path="/:language/" Component={IndexItem} />
-                <Route index extract path="/:language/new" Component={addRecordFormItem} />
+                <Route extract path="/:language/" Component={IndexItem} />
+                <Route extract path="/:language/new" Component={addRecordFormItem} />
             </Routes>
         </Router>
     );
