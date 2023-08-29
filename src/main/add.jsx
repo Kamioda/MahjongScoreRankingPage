@@ -15,7 +15,7 @@ const createMainForm = (playerCount, Lang) => {
                 React.createElement('input', {
                     type: 'text',
                     pattern: '^([a-zA-Z0-9_]{3,})$',
-                    value: records[formCountIndex].player_id,
+                    defaultValue: records[formCountIndex].player_id,
                     onChange: e => {
                         const Data = records;
                         Data[formCountIndex].player_id = e.target.value;
@@ -54,7 +54,7 @@ const createMainForm = (playerCount, Lang) => {
     const forms = [];
     for (let i = 0; i < playerCount; i++) forms.push(createInputForms(i));
     return React.createElement('div', { className: 'container' }, [
-        React.createElement('h1', null, LangData.content.add.title),
+        React.createElement('h3', null, LangData.content.add.title),
         React.createElement('p', null, LangData.content.add.caption.if_cpu),
         React.createElement('section', null, forms),
         React.createElement('input', { type: 'submit', value: LangData.content.add.caption.submit }),
