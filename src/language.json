@@ -11,7 +11,8 @@
             },
             "header": {
                 "index": "トップ",
-                "add": "レコード追加"
+                "add3": "レコード追加（３人）",
+                "add4": "レコード追加（４人）"
             },
             "content": {
                 "index": {
@@ -43,7 +44,8 @@
             },
             "header": {
                 "index": "Top",
-                "add": "Add records"
+                "add3": "Add records(3 Players)",
+                "add4": "Add records(4 Players)"
             },
             "content": {
                 "index": {

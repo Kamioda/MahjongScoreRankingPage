@@ -38,8 +38,13 @@ const PageHeaderItem = () => {
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-dark" href={`/${Lang}/new`}>
-                                    {LangData.header.add}
+                                <a className="nav-link text-dark" href={`/${Lang}/new?players=3`}>
+                                    {LangData.header.add3}
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link text-dark" href={`/${Lang}/new?players=4`}>
+                                    {LangData.header.add4}
                                 </a>
                             </li>
                         </ul>
