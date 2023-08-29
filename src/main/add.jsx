@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader';
+import PageHeaderItem from '../header.jsx';
 
 const createMainForm = (playerCount, Lang) => {
     const [records, setRecords] = React.useState([...Array(playerCount)].map(() => ({ player_id: '', score: 0 })));
@@ -65,7 +66,12 @@ const addRecordFormItem = () => {
     if (!params.has('players')) location.href = `/${Language}/`;
     const playerCount = parseInt(params.get('players'));
     if (playerCount !== 3 && playerCount !== 4) location.href = `/${Language}/`;
-    return createMainForm(playerCount, Language);
+    return (
+        <div>
+            <PageHeaderItem />
+            {createMainForm(playerCount, Language)}
+        </div>
+    );
 };
 
 export default addRecordFormItem;

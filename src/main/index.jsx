@@ -1,6 +1,7 @@
 import React, { useState, createElement } from 'react';
 import { SetTitle } from './title.js';
 import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader.js';
+import PageHeaderItem from '../header.jsx';
 
 /**
  *
@@ -42,10 +43,13 @@ const IndexItem = () => {
         );
     return (
         <div className="container">
-            <section>
-                <h3>{LangData.content.index.title}</h3>
-            </section>
-            {createElement('section', {}, Data)}
+            <PageHeaderItem />
+            <main>
+                <section>
+                    <h3>{LangData.content.index.title}</h3>
+                </section>
+                {createElement('section', {}, Data)}
+            </main>
         </div>
     );
 };

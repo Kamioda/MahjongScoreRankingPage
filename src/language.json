@@ -3,8 +3,13 @@
     "contents": [
         {
             "lang": "ja-jp",
+            "langview": "日本語",
             "title": "麻雀スコアランキング",
             "subtitles": {
+                "index": "トップ",
+                "add": "レコード追加"
+            },
+            "header": {
                 "index": "トップ",
                 "add": "レコード追加"
             },
@@ -30,8 +35,13 @@
         },
         {
             "lang": "en-us",
+            "langview": "English",
             "title": "Mahjong Score Ranking",
             "subtitles": {
+                "index": "Top",
+                "add": "Add records"
+            },
+            "header": {
                 "index": "Top",
                 "add": "Add records"
             },
