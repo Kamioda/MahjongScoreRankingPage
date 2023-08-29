@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import IndexItem from './main/index.jsx';
+import IndexItem from './main/home.jsx';
 import addRecordFormItem from './main/add.jsx';
 
 const App = () => {
