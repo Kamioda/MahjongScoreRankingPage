@@ -16,3 +16,9 @@ dd dl dd {
     margin-bottom: 1em;
     margin-right: 1em;
 }
+
+.checkbox_field * {
+    margin-right: 3px;
+    margin-top: 3px;
+    font-size: 16px;
+}

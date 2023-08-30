@@ -1,10 +1,10 @@
 import React from 'react';
-import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader';
+import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader.js';
 import PageHeaderItem from '../header.jsx';
 import '../css/add.css';
 
 const createMainForm = (playerCount, Lang) => {
-    const [records, setRecords] = React.useState([...Array(playerCount)].map(() => ({ player_id: '', score: 0 })));
+    const [records, setRecords] = React.useState([...Array(playerCount)].map(() => ({ player_id: '', player_id_cache: '', invalid: false, score: 0 })));
     const LangData = ReadLanguageData(Lang);
     const createPlayerIDInputForm = formCountIndex => {
         return React.createElement('dl', null, [
@@ -12,16 +12,47 @@ const createMainForm = (playerCount, Lang) => {
             React.createElement(
                 'dd',
                 null,
-                React.createElement('input', {
-                    type: 'text',
-                    pattern: '^([a-zA-Z0-9_]{3,})$',
-                    defaultValue: records[formCountIndex].player_id,
-                    onChange: e => {
-                        const Data = records;
-                        Data[formCountIndex].player_id = e.target.value;
-                        setRecords(Data);
-                    },
-                })
+                [
+                    React.createElement(
+                        'section',
+                        null,
+                        React.createElement('input', {
+                            type: 'text',
+                            pattern: '^([a-zA-Z0-9_]{1,})$',
+                            onChange: e => {
+                                const Data = records;
+                                if (!records[formCountIndex].invalid) Data[formCountIndex].player_id = e.target.value;
+                                records[formCountIndex].player_id_cache = e.target.value;
+                                setRecords(Data);
+                            },
+                        })
+                    ),
+                    React.createElement(
+                        'section',
+                        {
+                            className: 'checkbox_field'
+                        },
+                        [
+                            React.createElement('input', {
+                                type: 'checkbox',
+                                id: `$cpu_check_${formCountIndex}`,
+                                onChange: e => {
+                                    const Data = records;
+                                    Data[formCountIndex].player_id = e.target.checked ? 'CPU' : Data[formCountIndex].player_id_cache;
+                                    Data[formCountIndex].invalid = e.target.checked;
+                                    setRecords(Data);
+                                }
+                            }),
+                            React.createElement('label', 
+                                {
+                                    htmlFor: `$cpu_check_${formCountIndex}`,
+                                    
+                                },
+                                'CPU'
+                            )
+                        ]
+                    )
+                ]
             ),
         ]);
     };

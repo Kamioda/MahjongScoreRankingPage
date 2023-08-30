@@ -22,7 +22,7 @@
                 "add": {
                     "title": "レコード追加",
                     "caption": {
-                        "if_cpu": "ＣＰＵの場合は、プレイヤーＩＤフォームには\"CPU\"と入力して下さい。",
+                        "if_cpu": "ＣＰＵの場合は、\"CPU\"にチェックを入れて下さい。チェックが入っている場合、プレイヤーＩＤ欄に入力された値は無効化されます。",
                         "player": "プレイヤー",
                         "player_id": "プレイヤーID",
                         "score": "スコア",
@@ -55,7 +55,7 @@
                 "add": {
                     "title": "Add new record",
                     "caption": {
-                        "if_cpu": "If the player is CPU, please input \"CPU\" in the player id form.",
+                        "if_cpu": "If the player is CPU, please check the \"CPU\" checkbox under the player id form. If checked, the inputed data in player id form is invalid.",
                         "player": "Player",
                         "player_id": "Player ID",
                         "score": "Score",
