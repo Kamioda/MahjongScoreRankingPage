@@ -7,7 +7,8 @@
             "title": "麻雀スコアランキング",
             "subtitles": {
                 "index": "トップ",
-                "add": "レコード追加"
+                "add": "レコード追加",
+                "admin_player": "ユーザー管理"
             },
             "header": {
                 "index": "トップ",
@@ -31,6 +32,42 @@
                         "player_count_3": "３人",
                         "player_count_4": "４人"
                     }
+                },
+                "admin_player": {
+                    "title": "ユーザー管理",
+                    "caption": {
+                        "newuser": {
+                            "title": "新規ユーザー作成",
+                            "id": "ユーザーＩＤ",
+                            "name": "ユーザー名",
+                            "privilege": "権限"
+                        },
+                        "delete_user": {
+                            "title": "ユーザー削除",
+                            "id": "対象ユーザーのＩＤ"
+                        },
+                        "change_password": {
+                            "title": "パスワード変更",
+                            "id": "対象ユーザーのＩＤ",
+                            "password": "新しいパスワード"
+                        },
+                        "change_privilege": {
+                            "title": "権限変更",
+                            "id": "対象ユーザーのＩＤ",
+                            "privilege": "新しい権限レベル"
+                        },
+                        "change_user_info": {
+                            "title": "ユーザー情報変更",
+                            "id": "ユーザーＩＤ",
+                            "name": "名前"
+                        }
+                    },
+                    "listdata": {
+                        "privilege": [
+                            { "level": 0, "text": "管理者" },
+                            { "level": 1, "text": "標準ユーザー" }
+                        ]
+                    }
                 }
             }
         },
@@ -40,7 +77,8 @@
             "title": "Mahjong Score Ranking",
             "subtitles": {
                 "index": "Top",
-                "add": "Add records"
+                "add": "Add records",
+                "admin_player": "User Management"
             },
             "header": {
                 "index": "Top",
@@ -63,6 +101,42 @@
                         "player_count": "Player count(Contain CPUs)",
                         "player_count_3": "3 Players",
                         "player_count_4": "4 Players"
+                    }
+                },
+                "admin_player": {
+                    "title": "User Management",
+                    "caption": {
+                        "newuser": {
+                            "title": "Create New User",
+                            "id": "User ID",
+                            "name": "User Name",
+                            "privilege": "User Privilege"
+                        },
+                        "delete_user": {
+                            "title": "Delete User",
+                            "id": "Target User ID"
+                        },
+                        "change_password": {
+                            "title": "Change Password",
+                            "id": "Target User ID",
+                            "password": "New Password"
+                        },
+                        "change_privilege": {
+                            "title": "Change User Privilege",
+                            "id": "Target User ID",
+                            "privilege": "New Privilege Level"
+                        },
+                        "change_user_info": {
+                            "title": "Change User Information",
+                            "id": "User ID",
+                            "name": "User Name"
+                        }
+                    },
+                    "listdata": {
+                        "privilege": [
+                            { "level": 0, "text": "Administrators" },
+                            { "level": 1, "text": "Users" }
+                        ]
                     }
                 }
             }
