@@ -335,6 +335,7 @@ const PlayerAdminPageItem = () => {
         });
     return currentAccountInfo.privilege === 0
         ? React.createElement('div', { className: 'container' }, [
+              PageHeaderItem(),
               Sections.createNewAccount(LangData),
               Sections.deleteAccount(LangData),
               Sections.changePassword(LangData, currentAccountInfo),
@@ -342,6 +343,7 @@ const PlayerAdminPageItem = () => {
               Sections.changeUserInfo(LangData, currentAccountInfo),
           ])
         : React.createElement('div', { className: 'container' }, [
+              PageHeaderItem(),
               Sections.changePassword(LangData, currentAccountInfo),
               Sections.changeUserInfo(LangData, currentAccountInfo),
           ]);
