@@ -77,10 +77,14 @@ const createMainForm = (playerCount, Lang) => {
         return React.createElement(
             'section',
             {
-                className: 'input_form'
+                className: 'input_form',
             },
             [
-                React.createElement('span', { className: 'form_title' }, `${LangData.content.add.caption.player} ${formCountIndex + 1}`),
+                React.createElement(
+                    'span',
+                    { className: 'form_title' },
+                    `${LangData.content.add.caption.player} ${formCountIndex + 1}`
+                ),
                 createPlayerIDInputForm(formCountIndex),
                 createScoreInputForm(formCountIndex),
             ]
