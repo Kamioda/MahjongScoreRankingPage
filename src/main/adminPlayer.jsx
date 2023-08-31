@@ -3,6 +3,7 @@ import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader.js
 import { SetTitle } from './title.js';
 import PageHeaderItem from '../header.jsx';
 import '../css/admin_player.css';
+import PageFooterItem from '../footer.jsx';
 
 const Sections = {
     impl: {
@@ -323,19 +324,20 @@ const PlayerAdminPageItem = () => {
         ? React.createElement('div', { className: 'container' }, [
               PageHeaderItem(),
               React.createElement('main', null, [
-                Sections.createNewAccount(LangData),
-                Sections.deleteAccount(LangData),
-                Sections.changePassword(LangData, currentAccountInfo),
-                Sections.changePrivilege(LangData),
-                Sections.changeUserInfo(LangData, currentAccountInfo),
-              ])
+                  Sections.createNewAccount(LangData),
+                  Sections.deleteAccount(LangData),
+                  Sections.changePassword(LangData, currentAccountInfo),
+                  Sections.changePrivilege(LangData),
+                  Sections.changeUserInfo(LangData, currentAccountInfo),
+              ]),
           ])
         : React.createElement('div', { className: 'container' }, [
               PageHeaderItem(),
               React.createElement('main', null, [
-                Sections.changePassword(LangData, currentAccountInfo),
-                Sections.changeUserInfo(LangData, currentAccountInfo),
-              ])
+                  Sections.changePassword(LangData, currentAccountInfo),
+                  Sections.changeUserInfo(LangData, currentAccountInfo),
+              ]),
+              PageFooterItem(),
           ]);
 };
 

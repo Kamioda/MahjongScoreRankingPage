@@ -2,6 +2,7 @@ import React from 'react';
 import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader.js';
 import PageHeaderItem from '../header.jsx';
 import '../css/add.css';
+import PageFooterItem from '../footer.jsx';
 
 const createMainForm = (playerCount, Lang) => {
     const [records, setRecords] = React.useState(
@@ -109,9 +110,8 @@ const addRecordFormItem = () => {
     return (
         <div>
             <PageHeaderItem />
-            <main>
-                {createMainForm(playerCount, Language)}
-            </main>
+            <main>{createMainForm(playerCount, Language)}</main>
+            <PageFooterItem />
         </div>
     );
 };

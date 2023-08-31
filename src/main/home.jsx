@@ -2,6 +2,7 @@ import React, { useState, createElement } from 'react';
 import { SetTitle } from './title.js';
 import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader.js';
 import PageHeaderItem from '../header.jsx';
+import PageFooterItem from '../footer.jsx';
 
 /**
  *
@@ -50,6 +51,7 @@ const IndexItem = () => {
                 </section>
                 {createElement('section', {}, Data)}
             </main>
+            <PageFooterItem />
         </div>
     );
 };
