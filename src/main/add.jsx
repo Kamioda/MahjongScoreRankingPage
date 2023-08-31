@@ -74,13 +74,17 @@ const createMainForm = (playerCount, Lang) => {
         ]);
     };
     const createInputForms = formCountIndex => {
-        return React.createElement('dl', null, [
-            React.createElement('dt', null, `${LangData.content.add.caption.player} ${formCountIndex + 1}`),
-            React.createElement('dd', null, [
+        return React.createElement(
+            'section',
+            {
+                className: 'input_form'
+            },
+            [
+                React.createElement('span', { className: 'form_title' }, `${LangData.content.add.caption.player} ${formCountIndex + 1}`),
                 createPlayerIDInputForm(formCountIndex),
                 createScoreInputForm(formCountIndex),
-            ]),
-        ]);
+            ]
+        );
     };
     const forms = [];
     for (let i = 0; i < playerCount; i++) forms.push(createInputForms(i));

@@ -1,20 +1,30 @@
-dt {
+.input_form {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+}
+
+.input_form .form_title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #95ccff;
+    font-weight: bold;
+}
+
+.input_form dt {
     margin-top: 15px;
     font-weight: bold;
 }
-dd {
+.input_form dd {
     margin: 1em;
-}
-
-dd dl dt {
-    font-weight: normal;
-}
-
-dd dl dd {
-    margin-left: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-right: 1em;
 }
 
 .checkbox_field * {
