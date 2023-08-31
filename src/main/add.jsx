@@ -109,7 +109,9 @@ const addRecordFormItem = () => {
     return (
         <div>
             <PageHeaderItem />
-            {createMainForm(playerCount, Language)}
+            <main>
+                {createMainForm(playerCount, Language)}
+            </main>
         </div>
     );
 };
