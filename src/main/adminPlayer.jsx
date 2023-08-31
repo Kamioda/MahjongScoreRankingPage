@@ -1,11 +1,12 @@
 import React from 'react';
 import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader.js';
 import { SetTitle } from './title.js';
+import PageHeaderItem from '../header.jsx';
 import '../css/admin_player.css';
 
 const Sections = {
     impl: {
-        title: text => React.createElement('h4', null, text)
+        title: text => React.createElement('h4', null, text),
     },
     createNewAccount: LangData => {
         const [newAccountState, setNewAccountState] = React.useState({ id: '', name: '', privilege: 1 });
@@ -111,14 +112,11 @@ const Sections = {
                 });
             },
         });
-        return React.createElement(
-            'section', 
-            { className: 'admin' }, 
-            [
-                Sections.impl.title(LangData.content.admin_player.caption.delete_user.title),
-                InputIDSection, 
-                sendButton
-            ]);
+        return React.createElement('section', { className: 'admin' }, [
+            Sections.impl.title(LangData.content.admin_player.caption.delete_user.title),
+            InputIDSection,
+            sendButton,
+        ]);
     },
     changePassword: (LangData, UserInfo) => {
         const [requestBody, setRequestBody] = React.useState({ id: UserInfo.id, password: '' });
@@ -146,25 +144,21 @@ const Sections = {
                 ),
             ]
         );
-        const InputNewPasswordSection = React.createElement(
-            'dl',
-            null,
-            [
-                React.createElement('dt', null, LangData.content.admin_player.caption.change_password.password),
-                React.createElement(
-                    'dd',
-                    null,
-                    React.createElement('input', {
-                        type: 'password',
-                        onChange: e => {
-                            const Data = requestBody;
-                            Data.password = e.target.value;
-                            setRequestBody(Data);
-                        },
-                    })
-                ),
-            ]
-        );
+        const InputNewPasswordSection = React.createElement('dl', null, [
+            React.createElement('dt', null, LangData.content.admin_player.caption.change_password.password),
+            React.createElement(
+                'dd',
+                null,
+                React.createElement('input', {
+                    type: 'password',
+                    onChange: e => {
+                        const Data = requestBody;
+                        Data.password = e.target.value;
+                        setRequestBody(Data);
+                    },
+                })
+            ),
+        ]);
         const sendButton = React.createElement('input', {
             type: 'submit',
             value: LangData.content.admin_player.caption.submit,
@@ -179,15 +173,12 @@ const Sections = {
                 });
             },
         });
-        return React.createElement(
-            'section', 
-            { className: 'admin' }, 
-            [
-                Sections.impl.title(LangData.content.admin_player.caption.change_password.title),
-                InputIDSection, 
-                InputNewPasswordSection, 
-                sendButton
-            ]);
+        return React.createElement('section', { className: 'admin' }, [
+            Sections.impl.title(LangData.content.admin_player.caption.change_password.title),
+            InputIDSection,
+            InputNewPasswordSection,
+            sendButton,
+        ]);
     },
     changePrivilege: LangData => {
         const [requestBody, setRequestBody] = React.useState({ id: '', privilege: 1 });
@@ -241,15 +232,12 @@ const Sections = {
                 });
             },
         });
-        return React.createElement(
-            'section', 
-            { className: 'admin' }, 
-            [
-                Sections.impl.title(LangData.content.admin_player.caption.change_privilege.title),
-                InputIDSection, 
-                SelectPrivilegeSection, 
-                sendButton
-            ]);
+        return React.createElement('section', { className: 'admin' }, [
+            Sections.impl.title(LangData.content.admin_player.caption.change_privilege.title),
+            InputIDSection,
+            SelectPrivilegeSection,
+            sendButton,
+        ]);
     },
     changeUserInfo: (LangData, currentAccountInfo) => {
         const [requestBody, setRequestBody] = React.useState({
@@ -303,14 +291,12 @@ const Sections = {
                 });
             },
         });
-        return React.createElement(
-            'section', { className: 'admin' },
-            [
-                Sections.impl.title(LangData.content.admin_player.caption.change_user_info.title),
-                InputIDSection, 
-                InputNameSection, 
-                sendButton
-            ]);
+        return React.createElement('section', { className: 'admin' }, [
+            Sections.impl.title(LangData.content.admin_player.caption.change_user_info.title),
+            InputIDSection,
+            InputNameSection,
+            sendButton,
+        ]);
     },
 };
 
