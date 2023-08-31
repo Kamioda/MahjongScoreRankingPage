@@ -13,7 +13,8 @@
             "header": {
                 "index": "トップ",
                 "add3": "レコード追加（３人）",
-                "add4": "レコード追加（４人）"
+                "add4": "レコード追加（４人）",
+                "admin_player": "ユーザー管理"
             },
             "content": {
                 "index": {
@@ -84,7 +85,8 @@
             "header": {
                 "index": "Top",
                 "add3": "Add records(3 Players)",
-                "add4": "Add records(4 Players)"
+                "add4": "Add records(4 Players)",
+                "admin_player": "User Management"
             },
             "content": {
                 "index": {
