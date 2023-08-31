@@ -60,7 +60,8 @@
                             "title": "ユーザー情報変更",
                             "id": "ユーザーＩＤ",
                             "name": "名前"
-                        }
+                        },
+                        "submit": "送信"
                     },
                     "listdata": {
                         "privilege": [
@@ -130,7 +131,8 @@
                             "title": "Change User Information",
                             "id": "User ID",
                             "name": "User Name"
-                        }
+                        },
+                        "submit": "Send"
                     },
                     "listdata": {
                         "privilege": [

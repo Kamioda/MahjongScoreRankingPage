@@ -62,6 +62,7 @@ const Sections = {
         ]);
         const sendButton = React.createElement('input', {
             type: 'submit',
+            value: LangData.content.admin_player.caption.submit,
             onClick: () => {
                 fetch('./api/account', {
                     method: 'POST',
@@ -99,6 +100,7 @@ const Sections = {
         ]);
         const sendButton = React.createElement('input', {
             type: 'submit',
+            value: LangData.content.admin_player.caption.submit,
             onClick: () => {
                 fetch(`./api/account/${targetAccount}`, {
                     method: 'DELETE',
@@ -165,6 +167,7 @@ const Sections = {
         );
         const sendButton = React.createElement('input', {
             type: 'submit',
+            value: LangData.content.admin_player.caption.submit,
             onClick: () => {
                 fetch(`./api/account/password`, {
                     method: 'PATCH',
@@ -226,6 +229,7 @@ const Sections = {
         ]);
         const sendButton = React.createElement('input', {
             type: 'submit',
+            value: LangData.content.admin_player.caption.submit,
             onClick: () => {
                 fetch('./api/account/privilege', {
                     method: 'PATCH',
@@ -287,6 +291,7 @@ const Sections = {
         ]);
         const sendButton = React.createElement('input', {
             type: 'submit',
+            value: LangData.content.admin_player.caption.submit,
             onClick: () => {
                 fetch('./api/account', {
                     method: 'PATCH',
