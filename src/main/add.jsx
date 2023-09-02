@@ -3,6 +3,7 @@ import { GetLanguageFromParameter, ReadLanguageData } from '../languageloader.js
 import PageHeaderItem from '../header.jsx';
 import '../css/add.css';
 import PageFooterItem from '../footer.jsx';
+import CheckSignIn from '../checkSignIn.js';
 
 const createMainForm = (playerCount, Lang) => {
     const [records, setRecords] = React.useState(
@@ -103,6 +104,7 @@ const createMainForm = (playerCount, Lang) => {
 
 const addRecordFormItem = () => {
     const Language = GetLanguageFromParameter();
+    CheckSignIn(Language);
     const params = new URLSearchParams(location.search);
     if (!params.has('players')) location.href = `/${Language}/`;
     const playerCount = parseInt(params.get('players'));
