@@ -4,6 +4,7 @@ import { SetTitle } from './title.js';
 import PageHeaderItem from '../header.jsx';
 import '../css/admin_player.css';
 import PageFooterItem from '../footer.jsx';
+import CheckSignIn from '../checkSignIn.js';
 
 const Sections = {
     impl: {
@@ -311,15 +312,9 @@ const PlayerAdminPageItem = () => {
     SetTitle(lang, 'admin_player');
     const LangData = ReadLanguageData(lang);
     const [currentAccountInfo, setCurrentAccountInfo] = React.useState({ id: 'kamioda', name: '神御田', privilege: 1 });
-    fetch('./api/account', {
-        headers: {
-            Authorization: sessionStorage.getItem('token'),
-        },
-    })
-        .then(result => result.json())
-        .then(data => {
-            setCurrentAccountInfo(data);
-        });
+    CheckSignIn(lang).then(data => {
+        if (data !== null) setCurrentAccountInfo(data);
+    });
     return currentAccountInfo.privilege === 0
         ? React.createElement('div', { className: 'container' }, [
               PageHeaderItem(),
