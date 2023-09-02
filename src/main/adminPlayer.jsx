@@ -303,11 +303,6 @@ const Sections = {
 };
 
 const PlayerAdminPageItem = () => {
-    /*if (sessionStorage.getItem('token') == null) location.href = './signin';
-    const lang = GetLanguageFromParameter();
-    SetTitle(lang, 'admin_player');
-    const LangData = ReadLanguageData(lang);
-    const [currentAccountInfo, setCurrentAccountInfo] = React.useState({ id: '', name: '', privilege: 1 });*/
     const lang = GetLanguageFromParameter();
     SetTitle(lang, 'admin_player');
     const LangData = ReadLanguageData(lang);
