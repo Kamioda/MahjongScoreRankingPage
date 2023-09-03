@@ -12,7 +12,7 @@ import PageFooterItem from '../footer.jsx';
 const CalcAverage = Arr => (Arr.length === 0 ? 0 : Math.round(Arr.reduce((sum, i) => sum + i, 0) / Arr.length));
 
 const GetRanking = () => {
-    return fetch('./api/records').then(response => response.json());
+    return fetch('/api/records').then(response => response.json());
 };
 
 const IndexItem = () => {

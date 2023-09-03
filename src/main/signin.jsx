@@ -54,7 +54,7 @@ const SignInItem = () => {
             type: 'submit',
             value: LangData.content.signin.caption.submit,
             onClick: () => {
-                fetch('./api/signin', {
+                fetch('/api/signin', {
                     method: 'POST',
                     body: JSON.parse(SignInRequestData),
                     headers: {

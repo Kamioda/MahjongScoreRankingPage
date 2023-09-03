@@ -5,7 +5,7 @@ const CheckSignIn = Lang => {
         location.href = SignInPath;
         return Promise.resolve(null);
     }
-    return fetch('./api/account', {
+    return fetch('/api/account', {
         headers: {
             Authorization: sessionStorage.getItem('token'),
         },

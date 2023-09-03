@@ -67,7 +67,7 @@ const Sections = {
             type: 'submit',
             value: LangData.content.admin_player.caption.submit,
             onClick: () => {
-                fetch('./api/account', {
+                fetch('/api/account', {
                     method: 'POST',
                     body: JSON.parse(newAccountState),
                     headers: {
@@ -105,7 +105,7 @@ const Sections = {
             type: 'submit',
             value: LangData.content.admin_player.caption.submit,
             onClick: () => {
-                fetch(`./api/account/${targetAccount}`, {
+                fetch(`/api/account/${targetAccount}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ const Sections = {
             type: 'submit',
             value: LangData.content.admin_player.caption.submit,
             onClick: () => {
-                fetch(`./api/account/password`, {
+                fetch(`/api/account/password`, {
                     method: 'PATCH',
                     body: JSON.parse(requestBody),
                     headers: {
@@ -224,7 +224,7 @@ const Sections = {
             type: 'submit',
             value: LangData.content.admin_player.caption.submit,
             onClick: () => {
-                fetch('./api/account/privilege', {
+                fetch('/api/account/privilege', {
                     method: 'PATCH',
                     body: JSON.parse(requestBody),
                     headers: {
@@ -283,7 +283,7 @@ const Sections = {
             type: 'submit',
             value: LangData.content.admin_player.caption.submit,
             onClick: () => {
-                fetch('./api/account', {
+                fetch('/api/account', {
                     method: 'PATCH',
                     body: JSON.parse(requestBody),
                     headers: {
