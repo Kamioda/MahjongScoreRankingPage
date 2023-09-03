@@ -1,3 +1,10 @@
+article.ranking {
+    border: solid 1px #27acd9;
+	box-shadow: 2px 5px 5px #eeeeee;
+	padding: 1em;
+    margin: 1em;
+}
+
 article.ranking section {
     float: flex;
 }
