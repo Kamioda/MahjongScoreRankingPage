@@ -8,7 +8,8 @@
             "subtitles": {
                 "index": "トップ",
                 "add": "レコード追加",
-                "admin_player": "ユーザー管理"
+                "admin_player": "ユーザー管理",
+                "signin": "サインイン"
             },
             "header": {
                 "index": "トップ",
@@ -32,6 +33,16 @@
                         "player_count": "プレイヤー数（ＣＰＵを含む）",
                         "player_count_3": "３人",
                         "player_count_4": "４人"
+                    }
+                },
+                "signin": {
+                    "title": "サインイン",
+                    "caption": {
+                        "id": "ＩＤ",
+                        "password": "パスワード",
+                        "submit": "サインイン",
+                        "failed_signin": "サインインに失敗しました",
+                        "forgot_password": "パスワードを忘れた場合は、管理者にパスワードをリセットしてもらって下さい。"
                     }
                 },
                 "admin_player": {
@@ -80,7 +91,8 @@
             "subtitles": {
                 "index": "Top",
                 "add": "Add records",
-                "admin_player": "User Management"
+                "admin_player": "User Management",
+                "signin": "Sign In"
             },
             "header": {
                 "index": "Top",
@@ -104,6 +116,16 @@
                         "player_count": "Player count(Contain CPUs)",
                         "player_count_3": "3 Players",
                         "player_count_4": "4 Players"
+                    }
+                },
+                "signin": {
+                    "title": "Sign In",
+                    "caption": {
+                        "id": "ID",
+                        "password": "Password",
+                        "submit": "Sign In",
+                        "failed_signin": "Failed to sign in",
+                        "forgot_password": "If you forgot your account password, please ask your service administrator to reset its password."
                     }
                 },
                 "admin_player": {

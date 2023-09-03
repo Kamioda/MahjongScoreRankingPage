@@ -1,0 +1,21 @@
+.signin_form {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.signin_form section {
+    margin: 1em;
+}
+
+.signin_form section label {
+    width: 8%;
+}
+
+.signin_form p {
+    margin: 0; 
+    padding: 0;
+}

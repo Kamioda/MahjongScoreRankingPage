@@ -5,6 +5,7 @@ import Index from './main/index.jsx';
 import IndexItem from './main/home.jsx';
 import addRecordFormItem from './main/add.jsx';
 import PlayerAdminPageItem from './main/adminPlayer.jsx';
+import SignInItem from './main/signin.jsx';
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <Routes>
                 <Route index Component={Index} />
                 <Route extract path="/:language/" Component={IndexItem} />
+                <Route extract path="/:language/signin" Component={SignInItem} />
                 <Route extract path="/:language/new" Component={addRecordFormItem} />
                 <Route extract path="/:language/user" Component={PlayerAdminPageItem} />
             </Routes>
