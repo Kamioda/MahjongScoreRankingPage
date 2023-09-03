@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const PageHeaderItem = () => {
     const Lang = GetLanguageFromParameter();
     const LangData = ReadLanguageData(Lang);
-    console.log(LangData.header);
     const menuClasses = [
         'navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse',
         'navbar-collapse d-sm-inline-flex flex-sm-row-reverse collapse show',
