@@ -5,6 +5,7 @@ import PageHeaderItem from '../header.jsx';
 import '../css/admin_player.css';
 import PageFooterItem from '../footer.jsx';
 import CheckSignIn from '../checkSignIn.js';
+import toast from '../toast.js';
 
 const Sections = {
     impl: {
@@ -74,7 +75,18 @@ const Sections = {
                         'Content-Type': 'application/json',
                         Authorization: `Bearer ${sessionStorage.getItem('token')}`,
                     },
-                });
+                })
+                .then(response => {
+                    if (response.status === 201) return response.json();
+                    else return Promise.reject(response.statusText);
+                })
+                .then(data => {
+                    toast.success(
+                        `ID: ${data.id}\nPassword: ${data.password}`,
+                        LangData.response.success
+                    );
+                })
+                .catch(er => toast.error(er, LangData.response.fail));
             },
         });
         return React.createElement('section', { className: 'admin' }, [
