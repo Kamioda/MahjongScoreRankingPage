@@ -4,6 +4,7 @@ import PageHeaderItem from '../header.jsx';
 import '../css/add.css';
 import PageFooterItem from '../footer.jsx';
 import CheckSignIn from '../checkSignIn.js';
+import toast from '../toast.js';
 
 const createMainForm = (playerCount, Lang) => {
     const [records, setRecords] = React.useState(
@@ -93,12 +94,29 @@ const createMainForm = (playerCount, Lang) => {
         );
     };
     const forms = [];
+    const AddAction = async () => {
+        const Records = records.filter(i => i.player_id !== 'CPU');
+        const RequestObj = {};
+        Records.forEach(i => {
+            RequestObj[i.player_id] = i.score;
+        });
+        await fetch('./api/score', {
+            method: 'POST',
+            body: JSON.stringify(RequestObj),
+            headers: {
+                Authorization: sessionStorage.setItem('token')
+            }
+        }).then(result => {
+            if (result.status === 200) toast.success(LangData.content.add.response.success, Lang.response.success);
+            else toast.error(result.statusText, Lang.response.fail);
+        });
+    };
     for (let i = 0; i < playerCount; i++) forms.push(createInputForms(i));
     return React.createElement('div', { className: 'container' }, [
         React.createElement('h3', null, LangData.content.add.title),
         React.createElement('p', null, LangData.content.add.caption.if_cpu),
         React.createElement('section', null, forms),
-        React.createElement('input', { type: 'submit', value: LangData.content.add.caption.submit }),
+        React.createElement('input', { type: 'submit', value: LangData.content.add.caption.submit, onClick: AddAction }),
     ]);
 };
 

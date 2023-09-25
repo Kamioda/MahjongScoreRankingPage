@@ -33,6 +33,9 @@
                         "player_count": "プレイヤー数（ＣＰＵを含む）",
                         "player_count_3": "３人",
                         "player_count_4": "４人"
+                    },
+                    "response": {
+                        "success": "レコード追加しました"
                     }
                 },
                 "signin": {
@@ -82,6 +85,10 @@
                         ]
                     }
                 }
+            },
+            "response": {
+                "success": "成功！",
+                "fail": "失敗..."
             }
         },
         {
@@ -116,6 +123,9 @@
                         "player_count": "Player count(Contain CPUs)",
                         "player_count_3": "3 Players",
                         "player_count_4": "4 Players"
+                    },
+                    "response": {
+                        "success": "Record added"
                     }
                 },
                 "signin": {
@@ -165,6 +175,10 @@
                         ]
                     }
                 }
+            },
+            "response": {
+                "success": "Success!",
+                "fail": "Failed..."
             }
         }
     ]
