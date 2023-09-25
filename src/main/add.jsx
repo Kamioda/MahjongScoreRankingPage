@@ -104,7 +104,7 @@ const createMainForm = (playerCount, Lang) => {
             method: 'POST',
             body: JSON.stringify(RequestObj),
             headers: {
-                Authorization: sessionStorage.setItem('token')
+                Authorization: `Bearer ${sessionStorage.getItem('token')}`
             }
         }).then(result => {
             if (result.status === 200) toast.success(LangData.content.add.response.success, Lang.response.success);
